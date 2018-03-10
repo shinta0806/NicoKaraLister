@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E2A3A551-0975-40E6-AE75-4DB58FA8F59E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>NicoKaraLister</RootNamespace>
+    <AssemblyName>NicoKaraLister</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>.\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>アイコン\NicoKaraLister_Icon_1.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Hnx8.ReadJEnc, Version=1.2.2.309, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\Hnx8.ReadJEnc.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.SQLite, Version=1.0.98.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\_Common\ApplicationNameSettingsProvider.cs">
+      <Link>ApplicationNameSettingsProvider.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_Common\ApplicationSettingsProviderBase.cs">
+      <Link>ApplicationSettingsProviderBase.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_Common\CsvManager.cs">
+      <Link>CsvManager.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_Common\JulianDay.cs">
+      <Link>JulianDay.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_Common\LinqUtils.cs">
+      <Link>LinqUtils.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_Common\LogWriter.cs">
+      <Link>LogWriter.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_Common\ShintaCommon.cs">
+      <Link>ShintaCommon.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_Common\SimpleTraceListener.cs">
+      <Link>SimpleTraceListener.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_Common\SystemEnvironment.cs">
+      <Link>SystemEnvironment.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_Common\UpdaterLauncher.cs">
+      <Link>UpdaterLauncher.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_Common\VariableNameSettingsProvider.cs">
+      <Link>VariableNameSettingsProvider.cs</Link>
+    </Compile>
+    <Compile Include="..\..\_Common\WindowsApi.cs">
+      <Link>WindowsApi.cs</Link>
+    </Compile>
+    <Compile Include="CsvOutputSettings.cs" />
+    <Compile Include="CsvOutputWriter.cs" />
+    <Compile Include="FolderSettings.cs" />
+    <Compile Include="FormAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAbout.designer.cs">
+      <DependentUpon>FormAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEditInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditInfo.Designer.cs">
+      <DependentUpon>FormEditInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFolderSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFolderSettings.Designer.cs">
+      <DependentUpon>FormFolderSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormInputIdPrefix.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInputIdPrefix.Designer.cs">
+      <DependentUpon>FormInputIdPrefix.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNicoKaraLister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNicoKaraLister.Designer.cs">
+      <DependentUpon>FormNicoKaraLister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNicoKaraListerSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNicoKaraListerSettings.Designer.cs">
+      <DependentUpon>FormNicoKaraListerSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormOutputSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormOutputSettings.Designer.cs">
+      <DependentUpon>FormOutputSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSearchInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSearchInfo.Designer.cs">
+      <DependentUpon>FormSearchInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HtmlOutputSettings.cs" />
+    <Compile Include="HtmlOutputWriter.cs" />
+    <Compile Include="NicoKaraListerSettings.cs" />
+    <Compile Include="NklCommon.cs" />
+    <Compile Include="NklDatabaseTables.cs" />
+    <Compile Include="OutputSettings.cs" />
+    <Compile Include="OutputWriter.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebOutputSettings.cs" />
+    <Compile Include="WebOutputWriter.cs" />
+    <Compile Include="YukariOutputSettings.cs" />
+    <Compile Include="YukariOutputWriter.cs" />
+    <EmbeddedResource Include="FormAbout.resx">
+      <DependentUpon>FormAbout.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditInfo.resx">
+      <DependentUpon>FormEditInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFolderSettings.resx">
+      <DependentUpon>FormFolderSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInputIdPrefix.resx">
+      <DependentUpon>FormInputIdPrefix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNicoKaraLister.resx">
+      <DependentUpon>FormNicoKaraLister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNicoKaraListerSettings.resx">
+      <DependentUpon>FormNicoKaraListerSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormOutputSettings.resx">
+      <DependentUpon>FormOutputSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSearchInfo.resx">
+      <DependentUpon>FormSearchInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="アイコン\NicoKaraLister_Icon.png" />
+    <Content Include="アイコン\NicoKaraLister_Icon_1.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
