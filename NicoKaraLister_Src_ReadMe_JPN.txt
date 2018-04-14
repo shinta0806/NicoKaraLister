@@ -1,64 +1,64 @@
-———————————————————————————————————————
-———                                                                  ———
-———      ƒjƒRƒJƒ‰‚è‚·‚½[                                            ———
-———                      ƒ\[ƒXƒR[ƒh‚É‚Â‚¢‚Ä        2018/03/11      ———
-———                                                                  ———
-———————————————————————————————————————
+ï»¿ï¼ ï¼ ï¼ ï¼ ï¼ ï¼ ï¼ ï¼ ï¼ ï¼ ï¼ ï¼ ï¼ ï¼ ï¼ ï¼ ï¼ ï¼ ï¼ ï¼ ï¼ ï¼ ï¼ ï¼ ï¼ ï¼ ï¼ ï¼ ï¼ ï¼ ï¼ ï¼ ï¼ ï¼ ï¼ ï¼ ï¼ ï¼ ï¼ 
+ï¼ ï¼ ï¼                                                                   ï¼ ï¼ ï¼ 
+ï¼ ï¼ ï¼       ãƒ‹ã‚³ã‚«ãƒ©ã‚Šã™ãŸãƒ¼                                            ï¼ ï¼ ï¼ 
+ï¼ ï¼ ï¼                       ã‚½ãƒ¼ã‚¹ã‚³ãƒ¼ãƒ‰ã«ã¤ã„ã¦        2018/03/11      ï¼ ï¼ ï¼ 
+ï¼ ï¼ ï¼                                                                   ï¼ ï¼ ï¼ 
+ï¼ ï¼ ï¼ ï¼ ï¼ ï¼ ï¼ ï¼ ï¼ ï¼ ï¼ ï¼ ï¼ ï¼ ï¼ ï¼ ï¼ ï¼ ï¼ ï¼ ï¼ ï¼ ï¼ ï¼ ï¼ ï¼ ï¼ ï¼ ï¼ ï¼ ï¼ ï¼ ï¼ ï¼ ï¼ ï¼ ï¼ ï¼ ï¼ 
 
 
 ===============================================================================
-á   –¼    Ì   â  ƒjƒRƒJƒ‰‚è‚·‚½[
-á  ƒo[ƒWƒ‡ƒ“  â  Ver 3.21
-á   ì    ŽÒ   â  SHINTA
-á ƒz[ƒ€ƒy[ƒW â  http://shinta.coresv.com/software/nicokaralister_jpn/
-á  E ƒ [ ƒ‹  â  shinta.0806 <at> gmail.com
+â‰ª   å    ç§°   â‰«  ãƒ‹ã‚³ã‚«ãƒ©ã‚Šã™ãŸãƒ¼
+â‰ª  ãƒãƒ¼ã‚¸ãƒ§ãƒ³  â‰«  Ver 3.21
+â‰ª   ä½œ    è€…   â‰«  SHINTA
+â‰ª ãƒ›ãƒ¼ãƒ ãƒšãƒ¼ã‚¸ â‰«  http://shinta.coresv.com/software/nicokaralister_jpn/
+â‰ª  E ãƒ¡ ãƒ¼ ãƒ«  â‰«  shinta.0806 <at> gmail.com
 ===============================================================================
 
 
-y@–ÚŽŸ@z------------------------------------------------
+ã€ã€€ç›®æ¬¡ã€€ã€‘------------------------------------------------
 
-E“à—eŠT—v
-Eƒrƒ‹ƒh•û–@
-E‹K–ñ
-
-
-y@“à—eŠT—v@z--------------------------------------------
-
-@ƒjƒRƒJƒ‰‚è‚·‚½[‚Ìƒ\[ƒXƒR[ƒhˆêŽ®‚Å‚·B
-
-@ŠJ”­ŠÂ‹«‚ÍAVisual Studio Community 2017 ‚Å‚·B
-
-@‚È‚¨Aƒ\[ƒXƒR[ƒh‚ÉŠÖ‚·‚éƒTƒ|[ƒg‚Í‚Å‚«‚©‚Ë‚Ü‚·‚Ì‚Å‚²—¹³‰º‚³‚¢B
+ãƒ»å†…å®¹æ¦‚è¦
+ãƒ»ãƒ“ãƒ«ãƒ‰æ–¹æ³•
+ãƒ»è¦ç´„
 
 
-y@ƒrƒ‹ƒh•û–@@z------------------------------------------
+ã€ã€€å†…å®¹æ¦‚è¦ã€€ã€‘--------------------------------------------
 
-@ƒjƒRƒJƒ‰‚è‚·‚½[‚Ìƒrƒ‹ƒh‚É‚ÍA–{ƒvƒƒWƒFƒNƒg‚Ì‘¼‚ÉAˆÈ‰º‚ª•K—v‚Å‚·B
+ã€€ãƒ‹ã‚³ã‚«ãƒ©ã‚Šã™ãŸãƒ¼ã®ã‚½ãƒ¼ã‚¹ã‚³ãƒ¼ãƒ‰ä¸€å¼ã§ã™ã€‚
 
-ESHINTA ‹¤’Ê C# ƒ‰ƒCƒuƒ‰ƒŠ[
+ã€€é–‹ç™ºç’°å¢ƒã¯ã€Visual Studio Community 2017 ã§ã™ã€‚
+
+ã€€ãªãŠã€ã‚½ãƒ¼ã‚¹ã‚³ãƒ¼ãƒ‰ã«é–¢ã™ã‚‹ã‚µãƒãƒ¼ãƒˆã¯ã§ãã‹ã­ã¾ã™ã®ã§ã”äº†æ‰¿ä¸‹ã•ã„ã€‚
+
+
+ã€ã€€ãƒ“ãƒ«ãƒ‰æ–¹æ³•ã€€ã€‘------------------------------------------
+
+ã€€ãƒ‹ã‚³ã‚«ãƒ©ã‚Šã™ãŸãƒ¼ã®ãƒ“ãƒ«ãƒ‰ã«ã¯ã€æœ¬ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã®ä»–ã«ã€ä»¥ä¸‹ãŒå¿…è¦ã§ã™ã€‚
+
+ãƒ»SHINTA å…±é€š C# ãƒ©ã‚¤ãƒ–ãƒ©ãƒªãƒ¼
 https://github.com/shinta0806/CommonCsLib
 
-ESystem.Data.SQLite
+ãƒ»System.Data.SQLite
 https://system.data.sqlite.org/index.html/doc/trunk/www/index.wiki
 
-EReadJEnc ƒtƒ@ƒCƒ‹•¶ŽšƒR[ƒhŽ©“®”»•Êƒ‰ƒCƒuƒ‰ƒŠ
+ãƒ»ReadJEnc ãƒ•ã‚¡ã‚¤ãƒ«æ–‡å­—ã‚³ãƒ¼ãƒ‰è‡ªå‹•åˆ¤åˆ¥ãƒ©ã‚¤ãƒ–ãƒ©ãƒª
 http://hp.vector.co.jp/authors/VA055804/HNXgrep/#ReadJEnc
 
-@‚»‚ê‚¼‚ê‚Ìƒtƒ@ƒCƒ‹ŒQ‚ðA—á‚¦‚ÎˆÈ‰º‚Ì‚æ‚¤‚É”z’u‚µ‚Ä‚­‚¾‚³‚¢BƒjƒRƒJƒ‰‚è‚·‚½[‚Ìƒtƒ@ƒCƒ‹ŒQ‚æ‚è‚àASHINTA ‹¤’Ê C# ƒ‰ƒCƒuƒ‰ƒŠ[‚Ìƒtƒ@ƒCƒ‹ŒQ‚ª 1 ŠK‘wãˆÊ‚É‚È‚é‚æ‚¤‚É”z’u‚µ‚Ü‚·B
+ã€€ãã‚Œãžã‚Œã®ãƒ•ã‚¡ã‚¤ãƒ«ç¾¤ã‚’ã€ä¾‹ãˆã°ä»¥ä¸‹ã®ã‚ˆã†ã«é…ç½®ã—ã¦ãã ã•ã„ã€‚ãƒ‹ã‚³ã‚«ãƒ©ã‚Šã™ãŸãƒ¼ã®ãƒ•ã‚¡ã‚¤ãƒ«ç¾¤ã‚ˆã‚Šã‚‚ã€SHINTA å…±é€š C# ãƒ©ã‚¤ãƒ–ãƒ©ãƒªãƒ¼ã®ãƒ•ã‚¡ã‚¤ãƒ«ç¾¤ãŒ 1 éšŽå±¤ä¸Šä½ã«ãªã‚‹ã‚ˆã†ã«é…ç½®ã—ã¾ã™ã€‚
 
 C:\
   + CsProjects\
-      + _Common\        ©SHINTA ‹¤’Ê C# ƒ‰ƒCƒuƒ‰ƒŠ[ƒtƒ@ƒCƒ‹ŒQ
+      + _Common\        â†SHINTA å…±é€š C# ãƒ©ã‚¤ãƒ–ãƒ©ãƒªãƒ¼ãƒ•ã‚¡ã‚¤ãƒ«ç¾¤
       + NicoKaraLister\
-          + Src\        ©ƒjƒRƒJƒ‰‚è‚·‚½[ƒtƒ@ƒCƒ‹ŒQASystem.Data.SQLite.dllAHnx8.ReadJEnc.dll
-              + x86\    ©SQLite.Interop.dll
+          + Src\        â†ãƒ‹ã‚³ã‚«ãƒ©ã‚Šã™ãŸãƒ¼ãƒ•ã‚¡ã‚¤ãƒ«ç¾¤ã€System.Data.SQLite.dllã€Hnx8.ReadJEnc.dll
+              + x86\    â†SQLite.Interop.dll
 
 
-y@‹K–ñ@z------------------------------------------------
+ã€ã€€è¦ç´„ã€€ã€‘------------------------------------------------
 
-@ƒjƒRƒJƒ‰‚è‚·‚½[‚Ìƒ\[ƒXƒR[ƒh‚ÍA
-ƒNƒŠƒGƒCƒeƒBƒuEƒRƒ‚ƒ“ƒYEƒ‰ƒCƒZƒ“ƒXi•\Ž¦ 2.1 “ú–{j
+ã€€ãƒ‹ã‚³ã‚«ãƒ©ã‚Šã™ãŸãƒ¼ã®ã‚½ãƒ¼ã‚¹ã‚³ãƒ¼ãƒ‰ã¯ã€
+ã‚¯ãƒªã‚¨ã‚¤ãƒ†ã‚£ãƒ–ãƒ»ã‚³ãƒ¢ãƒ³ã‚ºãƒ»ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ï¼ˆè¡¨ç¤º 2.1 æ—¥æœ¬ï¼‰
 https://creativecommons.org/licenses/by/2.1/jp/
-‚Ì‰º‚ÉŒöŠJ‚³‚ê‚Ä‚¢‚Ü‚·B
+ã®ä¸‹ã«å…¬é–‹ã•ã‚Œã¦ã„ã¾ã™ã€‚
 
-¦–{ƒvƒƒWƒFƒNƒgˆÈŠO‚Ì‹K–ñ‚É‚Â‚¢‚Ä‚ÍAŠeƒvƒƒWƒFƒNƒg‚Ì‹K–ñ‚ðŽQÆ‚µ‚Ä‰º‚³‚¢B
+â€»æœ¬ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆä»¥å¤–ã®è¦ç´„ã«ã¤ã„ã¦ã¯ã€å„ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã®è¦ç´„ã‚’å‚ç…§ã—ã¦ä¸‹ã•ã„ã€‚

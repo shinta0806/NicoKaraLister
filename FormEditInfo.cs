@@ -563,6 +563,8 @@ namespace NicoKaraLister
 			// その他
 			mComboBoxSongIdLastSelectedIndex = -1;
 			mComboBoxProgramIdLastSelectedIndex = -1;
+
+			Common.CascadeForm(this);
 		}
 
 		// --------------------------------------------------------------------
@@ -598,7 +600,7 @@ namespace NicoKaraLister
 			{
 				using (FormInputIdPrefix aFormInputIdPrefix = new FormInputIdPrefix(mLogWriter))
 				{
-					if (aFormInputIdPrefix.ShowDialog() != DialogResult.OK)
+					if (aFormInputIdPrefix.ShowDialog(this) != DialogResult.OK)
 					{
 						throw new OperationCanceledException();
 					}
@@ -1108,7 +1110,7 @@ namespace NicoKaraLister
 			{
 				using (FormSearchInfo aFormSearchOrigin = new FormSearchInfo("楽曲名の正式名称", mSongCsvs, (Int32)SongCsvColumns.Name, TextBoxTitleOrigin.Text, mLogWriter))
 				{
-					if (aFormSearchOrigin.ShowDialog() == DialogResult.OK)
+					if (aFormSearchOrigin.ShowDialog(this) == DialogResult.OK)
 					{
 						TextBoxTitleOrigin.Text = aFormSearchOrigin.SelectedInfo;
 					}
@@ -1155,7 +1157,6 @@ namespace NicoKaraLister
 				else
 				{
 					// 既存楽曲
-					//List<String> aRecord = mMatchedSongsWithAlias[ComboBoxSongId.SelectedIndex - 1];
 					List<String> aRecord = NklCommon.FindCsvRecord(mSongCsvs, (Int32)SongCsvColumns.Id, (String)ComboBoxSongId.Items[ComboBoxSongId.SelectedIndex]);
 					TextBoxOpEd.Text = aRecord[(Int32)SongCsvColumns.OpEd];
 					TextBoxCastSeq.Text = aRecord[(Int32)SongCsvColumns.CastSeq];
@@ -1197,7 +1198,7 @@ namespace NicoKaraLister
 			{
 				using (FormSearchInfo aFormSearchOrigin = new FormSearchInfo("番組名の正式名称", mProgramCsvs, (Int32)ProgramCsvColumns.Name, TextBoxProgramNameOrigin.Text, mLogWriter))
 				{
-					if (aFormSearchOrigin.ShowDialog() == DialogResult.OK)
+					if (aFormSearchOrigin.ShowDialog(this) == DialogResult.OK)
 					{
 						TextBoxProgramNameOrigin.Text = aFormSearchOrigin.SelectedInfo;
 					}
@@ -1216,7 +1217,7 @@ namespace NicoKaraLister
 			{
 				using (FormSearchInfo aFormSearchOrigin = new FormSearchInfo("関連する番組名", mProgramCsvs, (Int32)ProgramCsvColumns.Name, TextBoxProgramNameRelated.Text, mLogWriter))
 				{
-					if (aFormSearchOrigin.ShowDialog() == DialogResult.OK)
+					if (aFormSearchOrigin.ShowDialog(this) == DialogResult.OK)
 					{
 						TextBoxProgramNameRelated.Text = aFormSearchOrigin.SelectedInfo;
 					}
@@ -1352,7 +1353,7 @@ namespace NicoKaraLister
 			{
 				using (FormSearchInfo aFormSearchOrigin = new FormSearchInfo("歌手名", mSongCsvs, (Int32)SongCsvColumns.Artist, TextBoxArtist.Text, mLogWriter))
 				{
-					if (aFormSearchOrigin.ShowDialog() == DialogResult.OK)
+					if (aFormSearchOrigin.ShowDialog(this) == DialogResult.OK)
 					{
 						TextBoxArtist.Text = aFormSearchOrigin.SelectedInfo;
 					}
@@ -1403,6 +1404,19 @@ namespace NicoKaraLister
 			catch (Exception oExcep)
 			{
 				ShowLogMessage(TraceEventType.Error, "年齢制限選択ボタン押下時エラー：\n" + oExcep.Message);
+				ShowLogMessage(TraceEventType.Verbose, "　スタックトレース：\n" + oExcep.StackTrace);
+			}
+		}
+
+		private void ButtonHelp_Click(object sender, EventArgs e)
+		{
+			try
+			{
+				NklCommon.ShowHelp("NicoKaraListerGamenjoudenoTouroku");
+			}
+			catch (Exception oExcep)
+			{
+				ShowLogMessage(TraceEventType.Error, "ヘルプボタン（情報編集ウィンドウ）クリック時エラー：\n" + oExcep.Message);
 				ShowLogMessage(TraceEventType.Verbose, "　スタックトレース：\n" + oExcep.StackTrace);
 			}
 		}

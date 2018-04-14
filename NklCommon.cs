@@ -186,7 +186,7 @@ namespace NicoKaraLister.Shared
 		// --------------------------------------------------------------------
 		public const String APP_ID = "NicoKaraLister";
 		public const String APP_NAME_J = "ニコカラりすたー";
-		public const String APP_VER = "Ver 3.21";
+		public const String APP_VER = "Ver 3.26";
 		public const String COPYRIGHT_J = "Copyright (C) 2017-2018 by SHINTA";
 
 		// --------------------------------------------------------------------
@@ -391,6 +391,22 @@ namespace NicoKaraLister.Shared
 					return FILE_NAME_SF_CSV;
 				default:
 					return FILE_NAME_MISC_CSV;
+			}
+		}
+
+		// --------------------------------------------------------------------
+		// ID 接頭辞の正当性を確認
+		// ＜例外＞ Exception
+		// --------------------------------------------------------------------
+		public static void CheckIdPrefix(String oIdPrefix)
+		{
+			if (String.IsNullOrEmpty(oIdPrefix))
+			{
+				throw new Exception("新規の楽曲 ID・番組 ID の先頭に付与する接頭辞を入力して下さい。");
+			}
+			if (oIdPrefix.IndexOf('_') >= 0)
+			{
+				throw new Exception("新規の楽曲 ID・番組 ID の先頭に付与する接頭辞に \"_\" は使えません。");
 			}
 		}
 
@@ -1137,15 +1153,28 @@ namespace NicoKaraLister.Shared
 		// --------------------------------------------------------------------
 		// ヘルプの表示
 		// --------------------------------------------------------------------
-		public static void ShowHelp()
+		public static void ShowHelp(String oAnchor = null)
 		{
+			String aHelpPath = null;
+
 			try
 			{
-				Process.Start(Path.GetDirectoryName(Application.ExecutablePath) + "\\" + FILE_NAME_HELP);
+				aHelpPath = Path.GetDirectoryName(Application.ExecutablePath) + "\\";
+
+				if (String.IsNullOrEmpty(oAnchor))
+				{
+					aHelpPath += FILE_NAME_HELP_PREFIX + Common.FILE_EXT_HTML;
+				}
+				else
+				{
+					aHelpPath += FOLDER_NAME_HELP_PARTS + FILE_NAME_HELP_PREFIX + "_" + oAnchor + Common.FILE_EXT_HTML;
+				}
+
+				Process.Start(aHelpPath);
 			}
 			catch (Exception)
 			{
-				ShowLogMessage(TraceEventType.Error, "ヘルプを表示できませんでした。\n" + FILE_NAME_HELP);
+				ShowLogMessage(TraceEventType.Error, "ヘルプを表示できませんでした。\n" + aHelpPath);
 			}
 		}
 
@@ -1224,10 +1253,11 @@ namespace NicoKaraLister.Shared
 		}
 
 		// ====================================================================
-		// public 定数
+		// private 定数
 		// ====================================================================
 
-		private const String FILE_NAME_HELP = "NicoKaraLister_JPN.html";
+		private const String FILE_NAME_HELP_PREFIX = APP_ID + "_JPN";
+		private const String FOLDER_NAME_HELP_PARTS = "HelpParts\\";
 
 		// ====================================================================
 		// private メンバー変数

@@ -8,6 +8,7 @@
 // 
 // ----------------------------------------------------------------------------
 
+using NicoKaraLister.Shared;
 using Shinta;
 using System;
 using System.Diagnostics;
@@ -59,6 +60,8 @@ namespace NicoKaraLister
 #if DEBUG
 			Text = "［デバッグ］" + Text;
 #endif
+
+			Common.CascadeForm(this);
 		}
 
 		// --------------------------------------------------------------------
@@ -79,17 +82,7 @@ namespace NicoKaraLister
 		{
 			try
 			{
-				if (String.IsNullOrEmpty(TextBoxIdPrefix.Text))
-				{
-					ShowLogMessage(TraceEventType.Error, "ID 接頭辞を入力して下さい。");
-					return;
-				}
-				if (TextBoxIdPrefix.Text.IndexOf('-') >= 0)
-				{
-					ShowLogMessage(TraceEventType.Error, "ID 接頭辞に \"_\" は使えません。");
-					return;
-				}
-
+				NklCommon.CheckIdPrefix(TextBoxIdPrefix.Text);
 				IdPrefix = TextBoxIdPrefix.Text;
 				DialogResult = DialogResult.OK;
 			}
@@ -123,6 +116,19 @@ namespace NicoKaraLister
 			catch (Exception oExcep)
 			{
 				ShowLogMessage(TraceEventType.Error, "ID 接頭辞入力フォームクローズ時エラー：\n" + oExcep.Message);
+				ShowLogMessage(TraceEventType.Verbose, "　スタックトレース：\n" + oExcep.StackTrace);
+			}
+		}
+
+		private void ButtonHelp_Click(object sender, EventArgs e)
+		{
+			try
+			{
+				NklCommon.ShowHelp("ShinkinoIdnoSentouniFuyosuruMojiretsu");
+			}
+			catch (Exception oExcep)
+			{
+				ShowLogMessage(TraceEventType.Error, "ヘルプボタン（ID 接頭辞入力ウィンドウ）クリック時エラー：\n" + oExcep.Message);
 				ShowLogMessage(TraceEventType.Verbose, "　スタックトレース：\n" + oExcep.StackTrace);
 			}
 		}

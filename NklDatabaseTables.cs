@@ -35,7 +35,7 @@ namespace NicoKaraLister.Shared
 		// ====================================================================
 
 		// ユニーク ID
-		[Column(Name = FIELD_NAME_PROPERTY_UID, DbType = LinqUtils.DB_TYPE_INTEGER, CanBeNull = false, IsPrimaryKey = true)]
+		[Column(Name = FIELD_NAME_PROPERTY_UID, DbType = LinqUtils.DB_TYPE_INT32, CanBeNull = false, IsPrimaryKey = true)]
 		public Int32 Uid { get; set; }
 
 		// データベース更新時のアプリケーションのバージョン
@@ -74,7 +74,7 @@ namespace NicoKaraLister.Shared
 		// ====================================================================
 
 		// ユニーク ID（CSV には無いフィールド）
-		[Column(Name = FIELD_NAME_PROGRAM_UID, DbType = LinqUtils.DB_TYPE_INTEGER, CanBeNull = false, IsPrimaryKey = true)]
+		[Column(Name = FIELD_NAME_PROGRAM_UID, DbType = LinqUtils.DB_TYPE_INT32, CanBeNull = false, IsPrimaryKey = true)]
 		public Int32 Uid { get; set; }
 
 		// 番組 ID（anison.info では重複していることがあるが、DB に格納する際にユニークにする）
@@ -147,7 +147,7 @@ namespace NicoKaraLister.Shared
 		// ====================================================================
 
 		// ユニーク ID（CSV には無いフィールド）
-		[Column(Name = FIELD_NAME_SONG_UID, DbType = LinqUtils.DB_TYPE_INTEGER, CanBeNull = false, IsPrimaryKey = true)]
+		[Column(Name = FIELD_NAME_SONG_UID, DbType = LinqUtils.DB_TYPE_INT32, CanBeNull = false, IsPrimaryKey = true)]
 		public Int32 Uid { get; set; }
 
 		// 番組 ID
@@ -205,7 +205,7 @@ namespace NicoKaraLister.Shared
 		// ====================================================================
 
 		// ユニーク ID（CSV には無いフィールド）
-		[Column(Name = FIELD_NAME_PROGRAM_ALIAS_UID, DbType = LinqUtils.DB_TYPE_INTEGER, CanBeNull = false, IsPrimaryKey = true)]
+		[Column(Name = FIELD_NAME_PROGRAM_ALIAS_UID, DbType = LinqUtils.DB_TYPE_INT32, CanBeNull = false, IsPrimaryKey = true)]
 		public Int32 Uid { get; set; }
 
 		// 番組 ID
@@ -238,7 +238,7 @@ namespace NicoKaraLister.Shared
 		// ====================================================================
 
 		// ユニーク ID（CSV には無いフィールド）
-		[Column(Name = FIELD_NAME_SONG_ALIAS_UID, DbType = LinqUtils.DB_TYPE_INTEGER, CanBeNull = false, IsPrimaryKey = true)]
+		[Column(Name = FIELD_NAME_SONG_ALIAS_UID, DbType = LinqUtils.DB_TYPE_INT32, CanBeNull = false, IsPrimaryKey = true)]
 		public Int32 Uid { get; set; }
 
 		// 楽曲 ID
@@ -284,7 +284,7 @@ namespace NicoKaraLister.Shared
 		// --------------------------------------------------------------------
 
 		// ユニーク ID
-		[Column(Name = FIELD_NAME_FOUND_UID, DbType = LinqUtils.DB_TYPE_INTEGER, CanBeNull = false, IsPrimaryKey = true)]
+		[Column(Name = FIELD_NAME_FOUND_UID, DbType = LinqUtils.DB_TYPE_INT32, CanBeNull = false, IsPrimaryKey = true)]
 		public Int32 Uid { get; set; }
 
 		// フルパス
@@ -308,11 +308,11 @@ namespace NicoKaraLister.Shared
 		public String Track { get; set; }
 
 		// スマートトラック：オンボーカル（有なら NklCommon.RULE_VALUE_VOCAL_DEFAULT）
-		[Column(Name = FIELD_NAME_FOUND_SMART_TRACK_ON, DbType = LinqUtils.DB_TYPE_INTEGER)]
+		[Column(Name = FIELD_NAME_FOUND_SMART_TRACK_ON, DbType = LinqUtils.DB_TYPE_INT32)]
 		public Int32 SmartTrackOnVocal { get; set; }
 
 		// スマートトラック：オフボーカル（有なら NklCommon.RULE_VALUE_VOCAL_DEFAULT）
-		[Column(Name = FIELD_NAME_FOUND_SMART_TRACK_OFF, DbType = LinqUtils.DB_TYPE_INTEGER)]
+		[Column(Name = FIELD_NAME_FOUND_SMART_TRACK_OFF, DbType = LinqUtils.DB_TYPE_INT32)]
 		public Int32 SmartTrackOffVocal { get; set; }
 
 		// 備考
@@ -324,7 +324,7 @@ namespace NicoKaraLister.Shared
 		public Double LastWriteTime { get; set; }
 
 		// ファイルサイズ
-		[Column(Name = FIELD_NAME_FOUND_FILE_SIZE, DbType = LinqUtils.DB_TYPE_INTEGER)]
+		[Column(Name = FIELD_NAME_FOUND_FILE_SIZE, DbType = LinqUtils.DB_TYPE_INT32)]
 		public Int64 FileSize { get; set; }
 
 		// --------------------------------------------------------------------

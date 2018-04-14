@@ -116,6 +116,7 @@
 			this.ContextMenuCategory = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.ContextMenuGameCategory = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.ContextMenuAgeLimit = new System.Windows.Forms.ContextMenuStrip(this.components);
+			this.ButtonHelp = new System.Windows.Forms.Button();
 			this.GroupBoxByFile.SuspendLayout();
 			this.groupBox1.SuspendLayout();
 			this.groupBox2.SuspendLayout();
@@ -923,7 +924,7 @@
 			this.ButtonOK.Location = new System.Drawing.Point(968, 408);
 			this.ButtonOK.Name = "ButtonOK";
 			this.ButtonOK.Size = new System.Drawing.Size(96, 28);
-			this.ButtonOK.TabIndex = 4;
+			this.ButtonOK.TabIndex = 5;
 			this.ButtonOK.Text = "OK";
 			this.ButtonOK.UseVisualStyleBackColor = true;
 			this.ButtonOK.Click += new System.EventHandler(this.ButtonOK_Click);
@@ -934,7 +935,7 @@
 			this.ButtonCancel.Location = new System.Drawing.Point(1081, 408);
 			this.ButtonCancel.Name = "ButtonCancel";
 			this.ButtonCancel.Size = new System.Drawing.Size(96, 28);
-			this.ButtonCancel.TabIndex = 5;
+			this.ButtonCancel.TabIndex = 6;
 			this.ButtonCancel.Text = "キャンセル";
 			this.ButtonCancel.UseVisualStyleBackColor = true;
 			// 
@@ -958,6 +959,16 @@
 			this.ContextMenuAgeLimit.Name = "ContextMenuAgeLimit";
 			this.ContextMenuAgeLimit.Size = new System.Drawing.Size(61, 4);
 			// 
+			// ButtonHelp
+			// 
+			this.ButtonHelp.Location = new System.Drawing.Point(16, 408);
+			this.ButtonHelp.Name = "ButtonHelp";
+			this.ButtonHelp.Size = new System.Drawing.Size(96, 28);
+			this.ButtonHelp.TabIndex = 4;
+			this.ButtonHelp.Text = "ヘルプ (&H)";
+			this.ButtonHelp.UseVisualStyleBackColor = true;
+			this.ButtonHelp.Click += new System.EventHandler(this.ButtonHelp_Click);
+			// 
 			// FormEditInfo
 			// 
 			this.AcceptButton = this.ButtonOK;
@@ -965,6 +976,7 @@
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.CancelButton = this.ButtonCancel;
 			this.ClientSize = new System.Drawing.Size(1191, 450);
+			this.Controls.Add(this.ButtonHelp);
 			this.Controls.Add(this.ButtonCancel);
 			this.Controls.Add(this.ButtonOK);
 			this.Controls.Add(this.GroupBoxProgramInfo);
@@ -1079,5 +1091,6 @@
 		private System.Windows.Forms.ContextMenuStrip ContextMenuCategory;
 		private System.Windows.Forms.ContextMenuStrip ContextMenuGameCategory;
 		private System.Windows.Forms.ContextMenuStrip ContextMenuAgeLimit;
+		private System.Windows.Forms.Button ButtonHelp;
 	}
 }

@@ -172,7 +172,7 @@ namespace NicoKaraLister
 					= new FormFolderSettings((String)DataGridViewTargetFolders.Rows[oRowIndex].Cells[(Int32)FolderColumns.Folder].Value, mNicoKaraListerSettings,
 					aSelectedOutputWriter.OutputSettings, mLogWriter))
 			{
-				aFormFolderSettings.ShowDialog();
+				aFormFolderSettings.ShowDialog(this);
 			}
 
 			// フォルダー設定の有無の表示を更新
@@ -2404,7 +2404,7 @@ namespace NicoKaraLister
 					return;
 				}
 
-				if (aSelectedOutputWriter.ShowDialog() != DialogResult.OK)
+				if (aSelectedOutputWriter.ShowDialog(this) != DialogResult.OK)
 				{
 					return;
 				}

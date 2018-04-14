@@ -336,7 +336,7 @@ namespace NicoKaraLister.Shared
 		// --------------------------------------------------------------------
 		// 設定画面表示
 		// --------------------------------------------------------------------
-		public DialogResult ShowDialog()
+		public DialogResult ShowDialog(IWin32Window oWindow)
 		{
 			if (!IsDialogEnabled())
 			{
@@ -345,7 +345,7 @@ namespace NicoKaraLister.Shared
 
 			using (FormOutputSettings aFormOutputSettings = new FormOutputSettings(this, LogWriter))
 			{
-				return aFormOutputSettings.ShowDialog();
+				return aFormOutputSettings.ShowDialog(oWindow);
 			}
 		}
 

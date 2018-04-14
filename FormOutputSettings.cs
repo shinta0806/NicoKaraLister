@@ -110,6 +110,8 @@ namespace NicoKaraLister
 				// フォームの大きさを調整
 				Width += aDeltaWidth;
 				Height += aDeltaHeight;
+
+				Common.CascadeForm(this);
 			}
 			catch (Exception oExcep)
 			{
@@ -160,6 +162,19 @@ namespace NicoKaraLister
 			catch (Exception oExcep)
 			{
 				ShowLogMessage(TraceEventType.Error, "出力設定フォームクローズ時エラー：\n" + oExcep.Message);
+				ShowLogMessage(TraceEventType.Verbose, "　スタックトレース：\n" + oExcep.StackTrace);
+			}
+		}
+
+		private void ButtonHelp_Click(object sender, EventArgs e)
+		{
+			try
+			{
+				NklCommon.ShowHelp("Shutsuryokusettei");
+			}
+			catch (Exception oExcep)
+			{
+				ShowLogMessage(TraceEventType.Error, "ヘルプボタン（出力設定フォーム）クリック時エラー：\n" + oExcep.Message);
 				ShowLogMessage(TraceEventType.Verbose, "　スタックトレース：\n" + oExcep.StackTrace);
 			}
 		}

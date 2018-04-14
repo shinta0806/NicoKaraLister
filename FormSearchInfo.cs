@@ -80,6 +80,8 @@ namespace NicoKaraLister
 
 			// 説明
 			LabelDescription.Text = mItemName + "を、既に登録されている情報から検索します。";
+
+			Common.CascadeForm(this);
 		}
 
 		// --------------------------------------------------------------------

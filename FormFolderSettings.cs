@@ -139,7 +139,7 @@ namespace NicoKaraLister
 
 			using (FormEditInfo aFormEditInfo = new FormEditInfo(aDic, mNicoKaraListerSettings, mLogWriter))
 			{
-				aFormEditInfo.ShowDialog();
+				aFormEditInfo.ShowDialog(this);
 			}
 		}
 
@@ -362,6 +362,8 @@ namespace NicoKaraLister
 
 			// 設計時サイズ以下にできないようにする
 			MinimumSize = Size;
+
+			Common.CascadeForm(this);
 		}
 
 		// --------------------------------------------------------------------
@@ -1166,11 +1168,11 @@ namespace NicoKaraLister
 		{
 			try
 			{
-				NklCommon.ShowHelp();
+				NklCommon.ShowHelp("FolderSettei");
 			}
 			catch (Exception oExcep)
 			{
-				ShowLogMessage(TraceEventType.Error, "ヘルプボタン（フォルダー設定ウィンドウ）クリック時エラー：\n" + oExcep.Message);
+				ShowLogMessage(TraceEventType.Error, "ヘルプボタン（フォルダー設定フォーム）クリック時エラー：\n" + oExcep.Message);
 				ShowLogMessage(TraceEventType.Verbose, "　スタックトレース：\n" + oExcep.StackTrace);
 			}
 		}

@@ -99,6 +99,8 @@ namespace NicoKaraLister
 
 				// コントロール
 				ActiveControl = ButtonOK;
+
+				Common.CascadeForm(this);
 			}
 			catch (Exception oExcep)
 			{

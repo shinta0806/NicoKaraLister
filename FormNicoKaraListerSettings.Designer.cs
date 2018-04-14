@@ -43,6 +43,10 @@
 			this.SaveFileDialogLog = new System.Windows.Forms.SaveFileDialog();
 			this.SaveFileDialogExport = new System.Windows.Forms.SaveFileDialog();
 			this.OpenFileDialogImport = new System.Windows.Forms.OpenFileDialog();
+			this.label3 = new System.Windows.Forms.Label();
+			this.label4 = new System.Windows.Forms.Label();
+			this.TextBoxIdPrefix = new System.Windows.Forms.TextBox();
+			this.ButtonHelp = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -57,19 +61,19 @@
 			// ButtonCancel
 			// 
 			this.ButtonCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-			this.ButtonCancel.Location = new System.Drawing.Point(312, 276);
+			this.ButtonCancel.Location = new System.Drawing.Point(312, 348);
 			this.ButtonCancel.Name = "ButtonCancel";
 			this.ButtonCancel.Size = new System.Drawing.Size(96, 28);
-			this.ButtonCancel.TabIndex = 10;
+			this.ButtonCancel.TabIndex = 14;
 			this.ButtonCancel.Text = "キャンセル";
 			this.ButtonCancel.UseVisualStyleBackColor = true;
 			// 
 			// ButtonOK
 			// 
-			this.ButtonOK.Location = new System.Drawing.Point(200, 276);
+			this.ButtonOK.Location = new System.Drawing.Point(200, 348);
 			this.ButtonOK.Name = "ButtonOK";
 			this.ButtonOK.Size = new System.Drawing.Size(96, 28);
-			this.ButtonOK.TabIndex = 9;
+			this.ButtonOK.TabIndex = 13;
 			this.ButtonOK.Text = "OK";
 			this.ButtonOK.UseVisualStyleBackColor = true;
 			this.ButtonOK.Click += new System.EventHandler(this.ButtonOK_Click);
@@ -97,20 +101,20 @@
 			// CheckBoxCheckRss
 			// 
 			this.CheckBoxCheckRss.AutoSize = true;
-			this.CheckBoxCheckRss.Location = new System.Drawing.Point(16, 124);
+			this.CheckBoxCheckRss.Location = new System.Drawing.Point(16, 196);
 			this.CheckBoxCheckRss.Name = "CheckBoxCheckRss";
 			this.CheckBoxCheckRss.Size = new System.Drawing.Size(310, 16);
-			this.CheckBoxCheckRss.TabIndex = 3;
+			this.CheckBoxCheckRss.TabIndex = 6;
 			this.CheckBoxCheckRss.Text = "ニコカラりすたーの最新情報・更新版を自動的に確認する (&L)";
 			this.CheckBoxCheckRss.UseVisualStyleBackColor = true;
 			this.CheckBoxCheckRss.CheckedChanged += new System.EventHandler(this.CheckBoxCheckRss_CheckedChanged);
 			// 
 			// ButtonCheckRss
 			// 
-			this.ButtonCheckRss.Location = new System.Drawing.Point(200, 148);
+			this.ButtonCheckRss.Location = new System.Drawing.Point(200, 220);
 			this.ButtonCheckRss.Name = "ButtonCheckRss";
 			this.ButtonCheckRss.Size = new System.Drawing.Size(208, 28);
-			this.ButtonCheckRss.TabIndex = 5;
+			this.ButtonCheckRss.TabIndex = 8;
 			this.ButtonCheckRss.Text = "今すぐ最新情報を確認する (&A)";
 			this.ButtonCheckRss.UseVisualStyleBackColor = true;
 			this.ButtonCheckRss.Click += new System.EventHandler(this.ButtonCheckRss_Click);
@@ -118,39 +122,39 @@
 			// label2
 			// 
 			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(16, 196);
+			this.label2.Location = new System.Drawing.Point(16, 276);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(75, 12);
-			this.label2.TabIndex = 6;
+			this.label2.TabIndex = 9;
 			this.label2.Text = "ログを保存する";
 			// 
 			// ButtonSaveLog
 			// 
-			this.ButtonSaveLog.Location = new System.Drawing.Point(200, 220);
+			this.ButtonSaveLog.Location = new System.Drawing.Point(200, 292);
 			this.ButtonSaveLog.Name = "ButtonSaveLog";
 			this.ButtonSaveLog.Size = new System.Drawing.Size(208, 28);
-			this.ButtonSaveLog.TabIndex = 7;
+			this.ButtonSaveLog.TabIndex = 10;
 			this.ButtonSaveLog.Text = "ログ保存 (&X)";
 			this.ButtonSaveLog.UseVisualStyleBackColor = true;
 			this.ButtonSaveLog.Click += new System.EventHandler(this.ButtonSaveLog_Click);
 			// 
 			// ProgressBarCheckRss
 			// 
-			this.ProgressBarCheckRss.Location = new System.Drawing.Point(16, 148);
+			this.ProgressBarCheckRss.Location = new System.Drawing.Point(16, 220);
 			this.ProgressBarCheckRss.MarqueeAnimationSpeed = 10;
 			this.ProgressBarCheckRss.Name = "ProgressBarCheckRss";
 			this.ProgressBarCheckRss.Size = new System.Drawing.Size(168, 28);
 			this.ProgressBarCheckRss.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
-			this.ProgressBarCheckRss.TabIndex = 4;
+			this.ProgressBarCheckRss.TabIndex = 7;
 			this.ProgressBarCheckRss.Visible = false;
 			// 
 			// panel2
 			// 
 			this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.panel2.Location = new System.Drawing.Point(0, 260);
+			this.panel2.Location = new System.Drawing.Point(0, 332);
 			this.panel2.Name = "panel2";
 			this.panel2.Size = new System.Drawing.Size(500, 5);
-			this.panel2.TabIndex = 8;
+			this.panel2.TabIndex = 11;
 			// 
 			// SaveFileDialogLog
 			// 
@@ -164,13 +168,52 @@
 			// 
 			this.OpenFileDialogImport.Filter = "楽曲番組情報ファイル|*.nklinfo";
 			// 
+			// label3
+			// 
+			this.label3.AutoSize = true;
+			this.label3.Location = new System.Drawing.Point(16, 120);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(249, 12);
+			this.label3.TabIndex = 3;
+			this.label3.Text = "新規の楽曲 ID・番組 ID の先頭に付与する文字列";
+			// 
+			// label4
+			// 
+			this.label4.AutoSize = true;
+			this.label4.Location = new System.Drawing.Point(32, 140);
+			this.label4.Name = "label4";
+			this.label4.Size = new System.Drawing.Size(352, 12);
+			this.label4.TabIndex = 4;
+			this.label4.Text = "※自分だけが使う文字列にすると、他人と重複する可能性が減るでしょう。";
+			// 
+			// TextBoxIdPrefix
+			// 
+			this.TextBoxIdPrefix.Location = new System.Drawing.Point(200, 160);
+			this.TextBoxIdPrefix.Name = "TextBoxIdPrefix";
+			this.TextBoxIdPrefix.Size = new System.Drawing.Size(208, 19);
+			this.TextBoxIdPrefix.TabIndex = 5;
+			// 
+			// ButtonHelp
+			// 
+			this.ButtonHelp.Location = new System.Drawing.Point(16, 348);
+			this.ButtonHelp.Name = "ButtonHelp";
+			this.ButtonHelp.Size = new System.Drawing.Size(96, 28);
+			this.ButtonHelp.TabIndex = 12;
+			this.ButtonHelp.Text = "ヘルプ (&H)";
+			this.ButtonHelp.UseVisualStyleBackColor = true;
+			this.ButtonHelp.Click += new System.EventHandler(this.ButtonHelp_Click);
+			// 
 			// FormNicoKaraListerSettings
 			// 
 			this.AcceptButton = this.ButtonOK;
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.CancelButton = this.ButtonCancel;
-			this.ClientSize = new System.Drawing.Size(425, 317);
+			this.ClientSize = new System.Drawing.Size(425, 391);
+			this.Controls.Add(this.ButtonHelp);
+			this.Controls.Add(this.TextBoxIdPrefix);
+			this.Controls.Add(this.label4);
+			this.Controls.Add(this.label3);
 			this.Controls.Add(this.panel2);
 			this.Controls.Add(this.ProgressBarCheckRss);
 			this.Controls.Add(this.ButtonSaveLog);
@@ -211,5 +254,9 @@
 		private System.Windows.Forms.SaveFileDialog SaveFileDialogLog;
 		private System.Windows.Forms.SaveFileDialog SaveFileDialogExport;
 		private System.Windows.Forms.OpenFileDialog OpenFileDialogImport;
+		private System.Windows.Forms.Label label3;
+		private System.Windows.Forms.Label label4;
+		private System.Windows.Forms.TextBox TextBoxIdPrefix;
+		private System.Windows.Forms.Button ButtonHelp;
 	}
 }

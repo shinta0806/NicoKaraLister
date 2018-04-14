@@ -79,7 +79,7 @@ namespace NicoKaraLister
 		// --------------------------------------------------------------------
 		private void CheckInput()
 		{
-			// 現在の所チェックする項目無し
+			NklCommon.CheckIdPrefix(TextBoxIdPrefix.Text);
 		}
 
 		// --------------------------------------------------------------------
@@ -87,6 +87,15 @@ namespace NicoKaraLister
 		// --------------------------------------------------------------------
 		private void ComposToSettings()
 		{
+			if (mNicoKaraListerSettings.IdPrefix != TextBoxIdPrefix.Text)
+			{
+				mNicoKaraListerSettings.IdPrefix = TextBoxIdPrefix.Text;
+
+				// IdPrefix が変更になる場合は ID をリセットする
+				mNicoKaraListerSettings.LastProgramIdNumber = 0;
+				mNicoKaraListerSettings.LastSongIdNumber = 0;
+			}
+
 			mNicoKaraListerSettings.CheckRss = CheckBoxCheckRss.Checked;
 		}
 
@@ -269,6 +278,8 @@ namespace NicoKaraLister
 #if DEBUG
 			Text = "［デバッグ］" + Text;
 #endif
+
+			Common.CascadeForm(this);
 		}
 
 		// --------------------------------------------------------------------
@@ -294,6 +305,7 @@ namespace NicoKaraLister
 		// --------------------------------------------------------------------
 		private void SettingsToCompos()
 		{
+			TextBoxIdPrefix.Text = mNicoKaraListerSettings.IdPrefix;
 			CheckBoxCheckRss.Checked = mNicoKaraListerSettings.CheckRss;
 		}
 
@@ -474,6 +486,19 @@ namespace NicoKaraLister
 			catch (Exception oExcep)
 			{
 				ShowLogMessage(TraceEventType.Error, "更新有効無効切替時エラー：\n" + oExcep.Message);
+				ShowLogMessage(TraceEventType.Verbose, "　スタックトレース：\n" + oExcep.StackTrace);
+			}
+		}
+
+		private void ButtonHelp_Click(object sender, EventArgs e)
+		{
+			try
+			{
+				NklCommon.ShowHelp("Kankyousettei");
+			}
+			catch (Exception oExcep)
+			{
+				ShowLogMessage(TraceEventType.Error, "ヘルプボタン（環境設定ウィンドウ）クリック時エラー：\n" + oExcep.Message);
 				ShowLogMessage(TraceEventType.Verbose, "　スタックトレース：\n" + oExcep.StackTrace);
 			}
 		}
