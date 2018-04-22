@@ -186,7 +186,7 @@ namespace NicoKaraLister.Shared
 		// --------------------------------------------------------------------
 		public const String APP_ID = "NicoKaraLister";
 		public const String APP_NAME_J = "ニコカラりすたー";
-		public const String APP_VER = "Ver 3.26";
+		public const String APP_VER = "Ver 3.27";
 		public const String COPYRIGHT_J = "Copyright (C) 2017-2018 by SHINTA";
 
 		// --------------------------------------------------------------------
