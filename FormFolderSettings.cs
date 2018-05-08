@@ -578,7 +578,17 @@ namespace NicoKaraLister
 			}
 
 			FolderSettingsInDisk aFolderSettings = ComposToSettings();
-			Common.Serialize(mFolder + "\\" + NklCommon.FILE_NAME_NICO_KARA_LISTER_CONFIG, aFolderSettings);
+			Common.Serialize(mFolder + "\\" + NklCommon.FILE_NAME_YUKA_LISTER_CONFIG, aFolderSettings);
+			if (File.Exists(mFolder + "\\" + NklCommon.FILE_NAME_NICO_KARA_LISTER_CONFIG))
+			{
+				try
+				{
+					File.Delete(mFolder + "\\" + NklCommon.FILE_NAME_NICO_KARA_LISTER_CONFIG);
+				}
+				catch (Exception)
+				{
+				}
+			}
 			UpdateSettingsFileStatus();
 		}
 
@@ -1187,7 +1197,14 @@ namespace NicoKaraLister
 					return;
 				}
 
-				File.Delete(mFolder + "\\" + NklCommon.FILE_NAME_NICO_KARA_LISTER_CONFIG);
+				if (File.Exists(mFolder + "\\" + NklCommon.FILE_NAME_YUKA_LISTER_CONFIG))
+				{
+					File.Delete(mFolder + "\\" + NklCommon.FILE_NAME_YUKA_LISTER_CONFIG);
+				}
+				if (File.Exists(mFolder + "\\" + NklCommon.FILE_NAME_NICO_KARA_LISTER_CONFIG))
+				{
+					File.Delete(mFolder + "\\" + NklCommon.FILE_NAME_NICO_KARA_LISTER_CONFIG);
+				}
 
 				// UI に反映（フォーム Shown() と同様の処理）
 				UpdateSettingsFileStatus();

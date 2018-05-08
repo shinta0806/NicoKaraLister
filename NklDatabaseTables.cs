@@ -324,7 +324,7 @@ namespace NicoKaraLister.Shared
 		public Double LastWriteTime { get; set; }
 
 		// ファイルサイズ
-		[Column(Name = FIELD_NAME_FOUND_FILE_SIZE, DbType = LinqUtils.DB_TYPE_INT32)]
+		[Column(Name = FIELD_NAME_FOUND_FILE_SIZE, DbType = LinqUtils.DB_TYPE_INT64)]
 		public Int64 FileSize { get; set; }
 
 		// --------------------------------------------------------------------

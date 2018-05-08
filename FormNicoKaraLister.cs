@@ -1009,7 +1009,15 @@ namespace NicoKaraLister
 						Int32 aUid = CountFoundDbRecord<TFound>();
 
 						// 検索
-						String[] aAllPathes = Directory.GetFiles(oFolderPath);
+						String[] aAllPathes;
+						try
+						{
+							aAllPathes = Directory.GetFiles(oFolderPath);
+						}
+						catch (Exception)
+						{
+							return;
+						}
 
 						// 挿入
 						foreach (String aPath in aAllPathes)

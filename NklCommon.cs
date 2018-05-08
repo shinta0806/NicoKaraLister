@@ -186,7 +186,7 @@ namespace NicoKaraLister.Shared
 		// --------------------------------------------------------------------
 		public const String APP_ID = "NicoKaraLister";
 		public const String APP_NAME_J = "ニコカラりすたー";
-		public const String APP_VER = "Ver 3.27";
+		public const String APP_VER = "Ver 3.30";
 		public const String COPYRIGHT_J = "Copyright (C) 2017-2018 by SHINTA";
 
 		// --------------------------------------------------------------------
@@ -230,6 +230,7 @@ namespace NicoKaraLister.Shared
 		// --------------------------------------------------------------------
 		public const String FILE_NAME_NICO_KARA_LISTER_CONFIG = APP_ID + Common.FILE_EXT_CONFIG;
 		public const String FILE_PREFIX_INFO = "Info";
+		public const String FILE_NAME_YUKA_LISTER_CONFIG = "YukaLister" + Common.FILE_EXT_CONFIG;
 
 		// --------------------------------------------------------------------
 		// アプリ独自ルールでの変数名（小文字で表記）
@@ -774,12 +775,17 @@ namespace NicoKaraLister.Shared
 
 		// --------------------------------------------------------------------
 		// 指定されたフォルダーのフォルダー設定ファイルがあるフォルダーを返す
+		// 互換性維持のため、ニコカラりすたーの設定ファイルも扱う
 		// --------------------------------------------------------------------
 		public static String FindSettingsFolder(String oFolder)
 		{
 			while (!String.IsNullOrEmpty(oFolder))
 			{
-				if (File.Exists(oFolder + "\\" + NklCommon.FILE_NAME_NICO_KARA_LISTER_CONFIG))
+				if (File.Exists(oFolder + "\\" + FILE_NAME_YUKA_LISTER_CONFIG))
+				{
+					return oFolder;
+				}
+				if (File.Exists(oFolder + "\\" + FILE_NAME_NICO_KARA_LISTER_CONFIG))
 				{
 					return oFolder;
 				}
@@ -1024,7 +1030,14 @@ namespace NicoKaraLister.Shared
 				String aFolderSettingsFolder = NklCommon.FindSettingsFolder(oFolder);
 				if (!String.IsNullOrEmpty(aFolderSettingsFolder))
 				{
-					aFolderSettings = Common.Deserialize<FolderSettingsInDisk>(aFolderSettingsFolder + "\\" + NklCommon.FILE_NAME_NICO_KARA_LISTER_CONFIG);
+					if (File.Exists(aFolderSettingsFolder + "\\" + FILE_NAME_YUKA_LISTER_CONFIG))
+					{
+						aFolderSettings = Common.Deserialize<FolderSettingsInDisk>(aFolderSettingsFolder + "\\" + FILE_NAME_YUKA_LISTER_CONFIG);
+					}
+					else
+					{
+						aFolderSettings = Common.Deserialize<FolderSettingsInDisk>(aFolderSettingsFolder + "\\" + FILE_NAME_NICO_KARA_LISTER_CONFIG);
+					}
 				}
 			}
 			catch (Exception)
